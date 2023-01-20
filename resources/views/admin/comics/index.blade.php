@@ -13,7 +13,7 @@
                 <th scope="col">Prezzo</th>
                 <th scope="col">Serie</th>
                 <th scope="col">Tipo</th>
-                <th scope="col">Vai al prodotto</th>
+                <th scope="col">Link</th>
             </tr>
         </thead>
         <tbody>
@@ -25,9 +25,9 @@
                     <td>{{ $comic->price }}</td>
                     <td>{{ $comic->series }}</td>
                     <td>{{ $comic->type }}</td>
-                    {{-- <td>
-                        <a href="{{ route('houses.show', ['house' => $house->id]) }}" class="btn btn-primary">Visita</a>
-                    </td> --}}
+                    <td>
+                        <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary">Visita</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
