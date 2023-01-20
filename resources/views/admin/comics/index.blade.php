@@ -32,4 +32,7 @@
             @endforeach
         </tbody>
     </table>
+    <div class="text-center">
+        <a href="{{ route('comics.create') }}" class="btn btn-primary">Aggiungi Fumetto</a>
+    </div>
 @endsection
