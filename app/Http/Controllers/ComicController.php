@@ -14,11 +14,9 @@ class ComicController extends Controller
      */
     public function index()
     {
-           // chiedera al database la lista di tutte le case (maginari paginate)
         $comics = Comic::all();
 
-        // ritornare la vista che stampa la lista di case
-        return view('comics.index', [
+        return view('admin.comics.index', [
             'comics' => $comics,
         ]);
     }
