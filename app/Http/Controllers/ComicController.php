@@ -49,6 +49,7 @@ class ComicController extends Controller
         $comic->sale_date = $data['sale_date'];
         $comic->type = $data['type'];
         $comic->save();
+
         return redirect()->route('comics.show', $comic->id);
     }
 
@@ -73,7 +74,9 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('admin.comics.edit',[
+            'comic' => $comic,
+        ]);
     }
 
     /**
@@ -85,7 +88,19 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+
+        $comic->title        = $data['title'];
+        $comic->description  = $data['description'];
+        $comic->thumb        = $data['thumb'];
+        $comic->price        = $data['price'];
+        $comic->series       = $data['series'];
+        $comic->sale_date    = $data['sale_date'];
+        $comic->type         = $data['type'];
+        $comic->update();
+
+
+        return redirect()->route('admin.comics.show', $comic->id);
     }
 
     /**
