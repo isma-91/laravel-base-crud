@@ -35,6 +35,12 @@
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary">Modifica</button>
+                <form action="{{ route('comics.destroy', ['comic' => $comic]) }}"       method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn btn-danger">Elimina</button>
+                </form>
             </div>
         </form>
+
 @endsection

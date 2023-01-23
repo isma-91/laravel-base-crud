@@ -111,6 +111,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('comics.index', ['comic' => $comic])->with('cancelled',"L'elemento '$comic->title' con numero ID $comic->id è stato cancellato correttamente" );
     }
 }
