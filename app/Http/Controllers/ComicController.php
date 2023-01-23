@@ -100,7 +100,7 @@ class ComicController extends Controller
         $comic->update();
 
 
-        return redirect()->route('admin.comics.show', $comic->id);
+        return redirect()->route('comics.show', ['comic' => $comic]);
     }
 
     /**
