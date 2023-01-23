@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'PageController@home')->name('home');
-Route::get('/dashboard', 'PageController@dashboard')->name('dashboard');
+Route::get('dashboard', 'PageController@dashboard')->name('dashboard');
 
 Route::resource('comics', 'ComicController');

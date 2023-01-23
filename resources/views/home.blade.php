@@ -10,6 +10,6 @@
 </head>
 <body>
     <h1 class="text-center">Homepage</h1>
-    <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Admin Dashboard</a>
+    <a href="{{ route('dashboard') }}" class="btn btn-primary">Admin Dashboard</a>
 </body>
 </html>
